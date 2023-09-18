@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<robot name="kmu_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find kmu_robot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find kmu_robot_description)/urdf/kmu_robot.trans" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-6.049626777184005e-07 -0.0008649326352775076 0.068211173822503" rpy="0 0 0"/>
+    <mass value="0.3478080978702228"/>
+    <inertia ixx="0.00152" iyy="0.001009" izz="0.00162" ixy="-0.0" iyz="0.00016" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_down_vel_1">
+  <inertial>
+    <origin xyz="-0.01250807645275244 -7.520281169390297e-06 -1.4895439048867587e-10" rpy="0 0 0"/>
+    <mass value="0.07719860417509514"/>
+    <inertia ixx="4.1e-05" iyy="2.4e-05" izz="2.4e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0625 -0.065 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/right_down_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber_soft"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0625 -0.065 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/right_down_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_down_vel_1">
+  <inertial>
+    <origin xyz="0.012508076450968186 -7.52027114479803e-06 -1.5037539963236313e-10" rpy="0 0 0"/>
+    <mass value="0.07719860405425265"/>
+    <inertia ixx="4.1e-05" iyy="2.4e-05" izz="2.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0625 -0.065 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/left_down_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber_soft"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0625 -0.065 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/left_down_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_up_vel_1">
+  <inertial>
+    <origin xyz="-0.012508076453554132 -7.521771799266774e-06 -1.4901610501105722e-10" rpy="0 0 0"/>
+    <mass value="0.07719860417985885"/>
+    <inertia ixx="4.1e-05" iyy="2.4e-05" izz="2.4e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0625 0.035 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/right_up_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber_soft"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0625 0.035 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/right_up_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_up_vel_1">
+  <inertial>
+    <origin xyz="0.012508076450968172 -7.521761260897986e-06 -1.5037539269346922e-10" rpy="0 0 0"/>
+    <mass value="0.0771986040542526"/>
+    <inertia ixx="4.1e-05" iyy="2.4e-05" izz="2.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0625 0.035 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/left_up_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="rubber_soft"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0625 0.035 -0.0325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/left_up_vel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_fix_1">
+  <inertial>
+    <origin xyz="0.00014058916329668788 2.0470286841781093e-06 0.02685786146455227" rpy="0 0 0"/>
+    <mass value="0.015404012727691301"/>
+    <inertia ixx="9e-06" iyy="1.9e-05" izz="1.1e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.037512 -0.1435" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/camera_fix_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_grey"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.037512 -0.1435" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/camera_fix_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="0.02748276531839804 -0.0005174604638783845 2.4884939386904392e-09" rpy="0 0 0"/>
+    <mass value="0.029393163630782666"/>
+    <inertia ixx="2e-06" iyy="8e-06" izz="8e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.027 0.038012 -0.2095" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_grey"/>
+  </visual>
+  <collision>
+    <origin xyz="0.027 0.038012 -0.2095" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kmu_robot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 8" type="continuous">
+  <origin xyz="-0.0625 0.065 0.0325" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_down_vel_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 9" type="continuous">
+  <origin xyz="0.0625 0.065 0.0325" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_down_vel_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 10" type="continuous">
+  <origin xyz="-0.0625 -0.035 0.0325" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_up_vel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 11" type="continuous">
+  <origin xyz="0.0625 -0.035 0.0325" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_up_vel_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 12" type="revolute">
+  <origin xyz="0.0 -0.037512 0.1435" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_fix_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 13" type="revolute">
+  <origin xyz="-0.027 -0.0005 0.066" rpy="0 0 0"/>
+  <parent link="camera_fix_1"/>
+  <child link="camera_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-0.785398" effort="100" velocity="100"/>
+</joint>
+
+</robot>
